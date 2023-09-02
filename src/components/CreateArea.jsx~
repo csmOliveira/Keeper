@@ -1,0 +1,20 @@
+import React, {useState} from "react";
+
+function CreateArea() {
+    const [createNoteArea, setCreateNoteArea] = useState({
+	noteTitle: "",
+	noteContent: ""
+    });
+    
+  return (
+    <div>
+      <form>
+          <input name="title" placeholder="Title" value={createNoteArea.noteTitle} />
+          <textarea name="content" placeholder="Take a note..." rows="3" value={createNoteArea.noteContent} />
+        <button>Add</button>
+      </form>
+    </div>
+  );
+}
+
+export default CreateArea;
